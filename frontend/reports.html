@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports - Hotel System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="reports" data-title="Reports">
+<div id="page">
+  <div id="denied" class="card empty" style="display:none"><i class="fa-solid fa-lock"></i>Reports are available to admin accounts only.</div>
+  <div id="reportsBody">
+    <div class="stats">
+      <div class="stat"><div class="ico blue"><i class="fa-solid fa-calendar-check"></i></div><div><small>Total Bookings</small><b id="rBookings">-</b></div></div>
+      <div class="stat"><div class="ico green"><i class="fa-solid fa-coins"></i></div><div><small>Total Revenue</small><b id="rRevenue">-</b></div></div>
+      <div class="stat"><div class="ico gold"><i class="fa-solid fa-users"></i></div><div><small>Total Guests</small><b id="rGuests">-</b></div></div>
+      <div class="stat"><div class="ico red"><i class="fa-solid fa-hourglass-half"></i></div><div><small>Unpaid Amount</small><b id="rUnpaid">-</b></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h2>Room Occupancy</h2></div>
+      <div id="occupancy"></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-head"><h2>Monthly Revenue</h2></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Month</th><th class="num">Bookings</th><th class="num">Revenue</th></tr></thead>
+          <tbody id="monthBody"></tbody>
+        </table></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Top Guests</h2></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Guest</th><th class="num">Bookings</th><th class="num">Total Spent</th></tr></thead>
+          <tbody id="topBody"></tbody>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="js/api.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>

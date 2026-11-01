@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staff - Hotel System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="staff" data-title="Staff">
+<div id="page">
+  <div class="toolbar">
+    <input class="search" id="search" placeholder="Search by name or role">
+    <button class="btn btn-primary" id="addBtn"><i class="fa-solid fa-plus"></i> Add Staff</button>
+  </div>
+  <div class="card"><div class="table-wrap"><table>
+    <thead><tr><th>Name</th><th>Role</th><th>Phone</th><th class="num">Salary</th><th>Join Date</th><th>Actions</th></tr></thead>
+    <tbody id="staffBody"></tbody>
+  </table></div></div>
+
+  <div class="modal-backdrop" id="staffModal">
+    <div class="modal">
+      <div class="modal-head"><h3 id="staffModalTitle">Add Staff</h3><button class="icon-btn" data-close aria-label="Close">&times;</button></div>
+      <form id="staffForm">
+        <div class="form-grid">
+          <div class="field full"><label>Name</label><input id="fName" required></div>
+          <div class="field"><label>Role</label>
+            <select id="fRole"><option value="manager">Manager</option><option value="receptionist">Receptionist</option><option value="chef">Chef</option><option value="cleaner">Cleaner</option><option value="security">Security</option></select></div>
+          <div class="field"><label>Phone</label><input id="fPhone" required></div>
+          <div class="field"><label>Salary (Rs)</label><input id="fSalary" type="number" min="0" required></div>
+          <div class="field"><label>Join Date</label><input id="fJoin" type="date" required></div>
+        </div>
+        <div class="modal-foot">
+          <button type="button" class="btn btn-light" data-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Staff</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <script src="js/api.js"></script>
+  <script src="js/staff.js"></script>
+</body>
+</html>

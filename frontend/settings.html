@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings - Hotel System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="settings" data-title="Settings">
+<div id="page">
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <div class="card-head"><h2>Profile</h2></div>
+        <div class="form-grid">
+          <div class="field"><label>Username</label><input id="pUser" readonly></div>
+          <div class="field"><label>Role</label><input id="pRole" readonly></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Hotel Info</h2></div>
+        <p class="muted">Shown on printed invoices. Saved in this browser only.</p>
+        <form id="hotelForm">
+          <div class="form-grid">
+            <div class="field"><label>Hotel Name</label><input id="hName"></div>
+            <div class="field"><label>Phone</label><input id="hPhone"></div>
+            <div class="field"><label>Email</label><input id="hEmail" type="email"></div>
+            <div class="field"><label>Address</label><input id="hAddress"></div>
+          </div>
+          <div class="modal-foot"><button class="btn btn-primary" type="submit">Save hotel info</button></div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <div class="card-head"><h2>Change Password</h2></div>
+        <form id="pwForm">
+          <div class="form-grid">
+            <div class="field full"><label>Current Password</label><input id="pwCur" type="password" autocomplete="current-password"></div>
+            <div class="field"><label>New Password</label><input id="pwNew" type="password" autocomplete="new-password"></div>
+            <div class="field"><label>Confirm Password</label><input id="pwConf" type="password" autocomplete="new-password"></div>
+          </div>
+          <div class="form-error" id="pwMsg"></div>
+          <div class="modal-foot"><button class="btn btn-primary" type="submit">Update password</button></div>
+        </form>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Preferences</h2></div>
+        <div class="switch-row"><span>Dark mode</span>
+          <label class="switch"><input type="checkbox" id="darkToggle"><span class="slider"></span></label></div>
+      </div>
+      <div class="card danger-zone">
+        <div class="card-head"><h2>Danger Zone</h2></div>
+        <p class="muted">Clears everything saved in this browser (login, hotel info, preferences). Data stored in the database is not touched.</p>
+        <button class="btn btn-danger" id="clearBtn"><i class="fa-solid fa-trash"></i> Clear All Data</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="js/api.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

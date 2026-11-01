@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Hotel System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard" data-title="Dashboard">
+<div id="page">
+  <div class="stats">
+    <div class="stat"><div class="ico blue"><i class="fa-solid fa-bed"></i></div><div><small>Total Rooms</small><b id="sTotal">-</b></div></div>
+    <div class="stat"><div class="ico green"><i class="fa-solid fa-door-open"></i></div><div><small>Available Rooms</small><b id="sAvail">-</b></div></div>
+    <div class="stat"><div class="ico orange"><i class="fa-solid fa-key"></i></div><div><small>Booked Rooms</small><b id="sBooked">-</b></div></div>
+    <div class="stat"><div class="ico gold"><i class="fa-solid fa-coins"></i></div><div><small>Today's Revenue</small><b id="sRevenue">-</b></div></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Recent Bookings</h2><a href="bookings.html" class="btn btn-light btn-sm">View all</a></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Guest</th><th>Room</th><th>Check-in</th><th>Check-out</th><th>Status</th><th class="num">Amount</th></tr></thead>
+      <tbody id="recentBody"></tbody>
+    </table></div>
+  </div>
+</div>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
